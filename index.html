@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+             /*Primary colors*/
+            lightred: 'hsl(356, 100%, 66%)',
+            verylightred: 'hsl(355, 100%, 74%)',
+            verydarkblue: 'hsl(208, 49%, 24%)',
+            /*Neutral colors*/
+            White: 'hsl(0, 0%, 100%)',
+            grayishblue: 'hsl(240, 2%, 79%)',
+            verydarkgrayishblue: 'hsl(207, 13%, 34%)',
+            verydarkblackblue: 'hsl(240, 10%, 16%)',
+            /*Gradient colors(Background gradient - Intro/CTA mobile nav)*/
+            Verylightred: 'hsl(13, 100%, 72%)',
+            Lightred: 'hsl(353, 100%, 62%)',
+            /*Gradient colors(Background gradient - body)*/
+            VerydarkGrayblue: 'hsl(237, 17%, 21%)',
+            Verydarkdesaturatedblue: 'hsl(237, 23%, 32%)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .para{
+      font-size: 16px;
+    }
+  </style>
+  
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section id="cta" class="bg-verylightred rounded-bl-[120px] bg-[url('/images/bg-pattern-intro-desktop.svg')] bg-cover bg-center">
+		<nav class="">
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="flex justify-between">
+					<div class="flex space-x-7">
+						<div>
+							<!-- Website Logo -->
+							<a href="#" class="flex items-center py-4 px-2">
+								<img src="images/logo.svg" alt="Logo" class="">
+							</a>
+						</div>
+						<!-- Primary Navbar items -->
+						<div class="hidden md:flex items-center space-x-1">
+							<a href="" class="py-4 text-White">Product</a>
+							<a href="" class="py-4 px-2 text-White">Company</a>
+							<a href="" class="py-4 px-2 text-White">Connect</a>
+						</div>
+					</div>
+					<!-- Secondary Navbar items -->
+					<div class="hidden md:flex items-center space-x-3 ">
+						<a href="" class="py-2 px-2 text-White">Login</a>
+						<a href="" class="py-2 px-6 font-medium  text-lightred bg-white rounded-full hover:bg-lightred transition duration-300">Sign Up</a>
+					</div>
+
+    	   <!--Hamburger icon-->
+    	   <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+    	   	 <span class="hamburger-top"></span>
+    	   	 <span class="hamburger-middle"></span>
+    	   	 <span class="hamburger-bottom"></span>
+    	   </button>
+    	</div>
+
+    	<!--Mobile Menu-->
+    	<div class="md:hidden">
+    		<div id="menu" class="absolute flex-col items-center hidden self-end  py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md hover:bg-brightRed">
+    			<a href="#">Product</a>
+    			<a href="#">Company</a>
+    			<a href="#">Connect</a>
+          <hr>
+    			<a href="#">Login</a>
+    			<a href="#" class="p-3 px-6 pt-2 bg-gradient-to-r from-Verylightred to-Lightred text-White rounded-full baseline hover:bg-brightRedLight">SignUp</a>
+    		</div>
+    	</div>
+    </nav>
+
+    <!--CTA content-->
+    <div class="container mx-auto items-center justify-between mt-10">
+      <h1 class="text-center">A modern publishing platform</h1>
+      <p class="text-center text-White mt-6">Grow your audience and build your online brand</p>
+
+      <div class="mx-auto text-center mt-10 mb-10">
+        <a href="#" class="p-3 px-6 pt-2 bg-White text-lightred rounded-full baseline hover:bg-brightRedLight">Start for Free</a>
+        <a href="#" class="p-3 px-6 pt-2 bg-gradient-to-r from-Verylightred to-Lightred text-White rounded-full baseline hover:bg-brightRedLight">Learn More</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="bg-White mt-20">
+    <h2 id="header1" class="text-center text-4xl font-medium text-verydarkblue">Designed for the future</h2>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="mt-20 pl-20">
+        <h2 class="text-verydarkblue text-2xl font-medium">Introducing an extensible editor</h2>
+        <p class="text-verydarkblue mt-5 para">
+          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.</p>
+         
+        <h2 class="text-verydarkblue text-2xl mt-16 font-medium">Robust content management</h2>  
+        <p class="text-verydarkblue mt-5 para"> 
+          Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          by adding customized categories, sections, format, or flow. With this functionality, you're in full control.</p>  
+      </div>
+      <div class=" flex justify-end">
+        <img src="images/illustration-editor-desktop.svg" alt="" class="svg">
+      </div>
+    </div>
+  </section>
+
+  <section id="phone-main" class=" mt-20 container2 bg-VerydarkGrayblue bg-[url('/images/bg-pattern-circles.svg')]  rounded-bl-[120px] rounded-tr-[120px]">
+    <div class="image">
+      <img src="images/illustration-phones.svg" alt="">
+    </div>
+    <div class="content">
+      <h2 class="text-4xl text-White font-normal">State of the Art Infrastructure</h2>
+      <p class="text-grayishblue mt-5 max-w-md"> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+    </div>
+  </section>
+
+
+  <section class="bg-White mt-40">
+    <div class="grid grid-cols-2 gap-4">
+      <div class=" flex justify-end">
+        <img src="images/illustration-laptop-desktop.svg" alt="" class="svg2">
+      </div>
+
+      <div class="mt-20 pl-20">
+        <h2 class="text-verydarkblue text-2xl font-medium">Free, open, simple</h2>
+        
+        <p class="text-verydarkblackblue mt-5 para max-w-lg">
+          Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+         
+        <h2 class="text-verydarkblue text-2xl mt-16 font-medium">Powerful tooling</h2>  
+        <p class="text-verydarkblackblue mt-5 para max-w-lg"> 
+        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.</p>  
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-verydarkblackblue rounded-tr-[120px] mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-8">
+        <div class=" sm:col-span-1">
+          <img src="images/logo.svg" alt="">
+        </div>
+        <div class="sm:col-span-1 text-grayishblue">
+          <h3 class="text-lg font-medium mb-5">Product</h3>
+          <ul class="text-sm">
+            <li class="mb-3"><a href="#">Overview</a></li>
+            <li class="mb-3"><a href="#">Pricing</a></li>
+            <li class="mb-3"><a href="#">Marketplace</a></li>
+            <li class="mb-3"><a href="#">Features</a></li>
+            <li class="mb-3"><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="sm:col-span-1 text-grayishblue">
+          <h3 class="text-lg font-medium mb-5">Company</h3>
+          <ul class="text-sm">
+            <li class="mb-3"><a href="#">About</a></li>
+            <li class="mb-3"><a href="#">Team</a></li>
+            <li class="mb-3"><a href="#">Blog</a></li>
+            <li class="mb-3"><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="sm:col-span-1 text-grayishblue">
+          <h3 class="text-lg font-medium mb-5">Connect</h3>
+          <ul class="text-sm">
+            <li class="mb-3"><a href="#">Contact</a></li>
+            <li class="mb-3"><a href="#">Newsletter</a></li>
+            <li class="mb-3"><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>          
+  
+
+
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Owen Ezeh</a>.
+  </div>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
